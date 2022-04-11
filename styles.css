@@ -1,0 +1,162 @@
+
+
+:root {
+    --background-clr: #63608a;
+    --dark-clr: #14080E;
+    --teal: #c3e5f1;
+    --dark-green: #d6f1b8;
+    --light-green: #E9EB9E;
+    --home-clr:  #f8312f;
+    --email-clr: #00a6ed;   
+    --social-clr: #6b438b;            
+
+}
+
+
+
+body {
+    box-sizing: border-box;
+    background-color: var(--background-clr);
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+ul {
+
+    list-style: none;
+
+}
+
+li {
+    display: inline;
+}
+
+header a {
+    line-height: 1.3rem;
+    /* text-decoration: none; */
+}
+
+
+/* Nav bar */
+.home {
+    color: var(--home-clr);
+    background-color: var(--teal);
+    text-decoration: none;
+    position: relative;
+    transition: 250ms ease;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+.home::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--home-clr);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: ease 400ms;
+}
+
+.home:hover {
+    font-size: 1.5rem;
+}
+
+.home:hover::after {
+    transform: scaleX(.95);
+    transform-origin: center;
+}
+
+.contact {
+    color: var(--email-clr);
+    background-color: var(--teal);
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 2px 5px;
+    position: relative;
+    transition: 250ms ease;
+}
+
+.contact::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--email-clr);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: ease-in 250ms;
+}
+
+.contact:hover {
+    font-size: 1.5rem;
+}
+
+.contact:hover::after {
+    transform: scaleX(.96);
+    transform-origin: center;
+}
+
+.social {
+    color: var(--social-clr);
+    background-color: var(--teal);
+    border-radius: 4px;
+    text-decoration: none;
+    padding: 2px 5px;
+    position: relative;
+    transition: 250ms ease;
+}
+
+.social::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: var(--social-clr);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: ease-in 250ms;
+
+}
+
+.social:hover {
+    font-size: 1.5rem;
+}
+
+.social:hover::after {
+    transform: scaleX(.95);
+    transform-origin: center;
+}
+
+.home::before {
+    content: "🏡";
+
+
+}
+
+
+
+.contact::before {
+    content: "📧";
+
+}
+
+.social::before {
+    content: "👥";
+
+}
+/* .home:hover  {
+    transform: scale(1.5);
+} */
