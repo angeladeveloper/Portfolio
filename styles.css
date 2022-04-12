@@ -10,9 +10,9 @@
     --email-clr: #00a6ed;   
     --social-clr: #c4c4c4;    
     --text-clr: #0B132B;        
-    --pg-background: #9e989e;
+    --pg-background: #eceaec;
     --shadow--clr: rgba(37, 3, 60, 0.30);
-    --gradient: linear-gradient(180deg, rgba(227,226,254,1) 0%, rgba(224,161,219,1) 37%, rgba(181,122,219,1) 64%, rgba(103,65,194,1) 95%);
+    --gradient: linear-gradient(45deg, rgb(242, 209, 251) 0%, rgba(224, 161, 219, 1) 37%, rgba(181, 122, 219, 1) 64%, rgba(103, 65, 194, 1) 95%);
 
 }
 
@@ -21,12 +21,13 @@
 body {
     box-sizing: border-box;
     background-color: var(--pg-background);
+    font-family: 'Poppins', sans-serif;
 
 }
 
+
 header {
-    background: rgb(227,226,254);
-    background: linear-gradient(180deg, rgba(227,226,254,1) 0%, rgba(224,161,219,1) 37%, rgba(181,122,219,1) 64%, rgba(103,65,194,1) 95%);
+    /* background: rgb(227, 226, 254); */
     color: var(--text-clr);
     z-index: 1;
     border: var(--light-green) solid 2px;
@@ -44,8 +45,42 @@ header {
     gap: 1rem;
 
 }
+
+.gradblock {
+    /* width: 100%;
+    background: rgb(227, 226, 254);
+    background: linear-gradient(180deg, rgba(227, 226, 254, 1) 0%, rgba(224, 161, 219, 1) 37%, rgba(181, 122, 219, 1) 64%, rgba(103, 65, 194, 1) 95%); */
+}
+
+
+
+
  h1 {
-    color: var(--text-clr);
+        /* margin: 0 0 .5em;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-style: italic;
+        font-size: 3rem;
+        color: #ee6352;
+        line-height: .8;
+        margin: 0; */
+    
+        background-image: var(--gradient);
+        background-clip: text;
+        color: transparent;
+        display: inline-block;
+        background-size: 300%;
+        transition: background-position 1s;
+        background-image: var(--gradient);
+        background-clip: text;
+        color: transparent;
+        background-position: center;
+ }
+
+/* hover gradient affect */
+
+h1:hover {
+    background-position: right;
  }
 
 nav ul {
@@ -55,12 +90,9 @@ nav ul {
 
 }
 
-li {
+.headerlinks li {
     display: inline;
     margin: 0 .2rem;
-}
-
-nav {
 }
 
 header a {
@@ -73,7 +105,8 @@ header a {
 /* Nav bar */
 .home {
     color: var(--home-clr);
-    background-color: var(--teal);
+    background-image: var(--gradient);
+    background-size: 300%;
     text-decoration: none;
     position: relative;
     transition: 250ms ease;
@@ -96,6 +129,7 @@ header a {
 
 .home:hover {
     font-size: 1.5rem;
+    background-position: 33%;
 }
 
 .home:hover::after {
@@ -105,7 +139,9 @@ header a {
 
 .contact {
     color: var(--email-clr);
-    background-color: var(--teal);
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: 66%;
     border-radius: 4px;
     text-decoration: none;
     padding: 2px 5px;
@@ -128,6 +164,7 @@ header a {
 
 .contact:hover {
     font-size: 1.5rem;
+    background-position: 100%;
 }
 
 .contact:hover::after {
@@ -137,7 +174,9 @@ header a {
 
 .social {
     color: var(--social-clr);
-    background-color: var(--teal);
+    background-image: var(--gradient);
+    background-size: 300%;
+    background-position: 100%;
     border-radius: 4px;
     text-decoration: none;
     padding: 2px 5px;
@@ -161,6 +200,7 @@ header a {
 
 .social:hover {
     font-size: 1.5rem;
+    background-position: 66%;
 }
 
 .social:hover::after {
@@ -197,7 +237,7 @@ main {
 /* main image */
 img {
     position: relative;
-    width: 20%;
+    max-width: 20%;
     z-index: 0;
     border: var(--dark-clr) solid 1px;
     border-radius: 1em;
@@ -205,29 +245,40 @@ img {
     box-shadow: -.25em .67em .6em var(--shadow--clr);
 }
 
-.mainsection {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2em;
-
-}
 
 
 
-.iconsection {
+
+div .iconsection {
     /* width: fit-content; */
-
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 7em;
 }
 
 .iconsection p {
-    display: inline;
-    padding: 1em;
-    margin: 2em;
+    /* padding: 1em;
+    margin: 2em; */
+    top: 100px;
+
+
+}
+
+aside {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 
 
 }
 
 ul {
     list-style: none;
+
+}
+
+.projectlinks {
+    display: inline;
+    background: none;
 }
