@@ -3,12 +3,16 @@
 :root {
     --background-clr: #63608a;
     --dark-clr: #14080E;
-    --teal: #c3e5f1;
+    --teal: #adaad6;
     --dark-green: #d6f1b8;
-    --light-green: #E9EB9E;
+    --light-green: #E3D7FF;
     --home-clr:  #f8312f;
     --email-clr: #00a6ed;   
-    --social-clr: #6b438b;            
+    --social-clr: #6b438b;    
+    --text-clr: #0B132B;        
+    --pg-background: #b57adb;
+    --shadow--clr: rgba(37, 3, 60, 0.30);
+    --gradient: linear-gradient(180deg, rgba(227,226,254,1) 0%, rgba(224,161,219,1) 37%, rgba(181,122,219,1) 64%, rgba(103,65,194,1) 95%);
 
 }
 
@@ -16,28 +20,52 @@
 
 body {
     box-sizing: border-box;
-    background-color: var(--background-clr);
+    background-color: var(--pg-background);
+
+}
+
+header {
+    background: rgb(227,226,254);
+    background: linear-gradient(180deg, rgba(227,226,254,1) 0%, rgba(224,161,219,1) 37%, rgba(181,122,219,1) 64%, rgba(103,65,194,1) 95%);
+    color: var(--text-clr);
+    z-index: 1;
+    border: var(--light-green) solid 2px;
+    border-radius: .8em;
+    box-shadow: -.5em .75em 1em var(--shadow--clr);
 
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    width: 97%;
+    position: fixed;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+
 }
+ h1 {
+    color: var(--text-clr);
+ }
 
-
-ul {
-
+nav ul {
+    display: flex;
+    justify-content: flex-end;
     list-style: none;
 
 }
 
 li {
     display: inline;
+    margin: 0 .2rem;
+}
+
+nav {
 }
 
 header a {
     line-height: 1.3rem;
+
     /* text-decoration: none; */
 }
 
@@ -160,3 +188,46 @@ header a {
 /* .home:hover  {
     transform: scale(1.5);
 } */
+
+
+main {
+    position: relative;
+    top: 90px;
+}
+/* main image */
+img {
+    position: relative;
+    width: 20%;
+    z-index: 0;
+    border: var(--dark-clr) solid 1px;
+    border-radius: 1em;
+    top: 100px;
+    box-shadow: -.25em .67em .6em var(--shadow--clr);
+}
+
+.mainsection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+
+}
+
+
+
+.iconsection {
+    /* width: fit-content; */
+
+}
+
+.iconsection p {
+    display: inline;
+    padding: 1em;
+    margin: 2em;
+
+
+}
+
+ul {
+    list-style: none;
+}
